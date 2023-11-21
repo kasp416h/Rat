@@ -73,32 +73,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/kasperhog/.nuget/packages/": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kasperhog/Projects/Rat/Rat/Rat.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Rat\\Rat.csproj",
       "projectName": "Rat",
-      "projectPath": "/Users/kasperhog/Projects/Rat/Rat/Rat.csproj",
-      "packagesPath": "/Users/kasperhog/.nuget/packages/",
-      "outputPath": "/Users/kasperhog/Projects/Rat/Rat/obj/",
+      "projectPath": "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Rat\\Rat.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Rat\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/kasperhog/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/kasperhog/Projects/Rat/Data Access Layer/Data Access Layer.csproj": {
-              "projectPath": "/Users/kasperhog/Projects/Rat/Data Access Layer/Data Access Layer.csproj"
+            "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Data Access Layer\\Data Access Layer.csproj": {
+              "projectPath": "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Data Access Layer\\Data Access Layer.csproj"
             }
           }
         }
@@ -128,7 +130,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
