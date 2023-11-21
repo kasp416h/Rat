@@ -37,4 +37,6 @@ public class RaceManager
         Player player = new Player(name, password, money);
         return player;
     }
+
+
 }

@@ -12,6 +12,7 @@ namespace Rat
             Name = name;
             Upper = upper;
             Lower = lower;
+            Posistion = 0;
         }
         public void ResetRat()
         {

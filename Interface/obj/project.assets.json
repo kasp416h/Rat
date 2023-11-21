@@ -14,6 +14,32 @@
             "related": ".xml"
           }
         }
+      },
+      "Data Access Layer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Data Access Layer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data Access Layer.dll": {}
+        }
+      },
+      "Rat/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Data Access Layer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rat.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rat.dll": {}
+        }
       }
     }
   },
@@ -47,11 +73,21 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "Data Access Layer/1.0.0": {
+      "type": "project",
+      "path": "../Data Access Layer/Data Access Layer.csproj",
+      "msbuildProject": "../Data Access Layer/Data Access Layer.csproj"
+    },
+    "Rat/1.0.0": {
+      "type": "project",
+      "path": "../Rat/Rat.csproj",
+      "msbuildProject": "../Rat/Rat.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Newtonsoft.Json >= 13.0.3"
+      "Rat >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -60,11 +96,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kasperhog/Projects/Rat/Data Access Layer/Data Access Layer.csproj",
-      "projectName": "Data Access Layer",
-      "projectPath": "/Users/kasperhog/Projects/Rat/Data Access Layer/Data Access Layer.csproj",
+      "projectUniqueName": "/Users/kasperhog/Projects/Rat/Interface/Interface.csproj",
+      "projectName": "Interface",
+      "projectPath": "/Users/kasperhog/Projects/Rat/Interface/Interface.csproj",
       "packagesPath": "/Users/kasperhog/.nuget/packages/",
-      "outputPath": "/Users/kasperhog/Projects/Rat/Data Access Layer/obj/",
+      "outputPath": "/Users/kasperhog/Projects/Rat/Interface/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/kasperhog/.nuget/NuGet/NuGet.Config"
@@ -78,7 +114,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/kasperhog/Projects/Rat/Rat/Rat.csproj": {
+              "projectPath": "/Users/kasperhog/Projects/Rat/Rat/Rat.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -90,12 +130,6 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
-        "dependencies": {
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.3, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
