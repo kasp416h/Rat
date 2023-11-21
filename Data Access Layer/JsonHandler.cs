@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 public class JsonHandler
 {
     private string _filePath;
-    public JsonHandler(string filePath)
+    public void SetFilePath(string filePath)
     {
         _filePath = filePath;
     }
