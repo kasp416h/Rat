@@ -78,9 +78,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Rat\\Rat.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\Rat.csproj",
       "projectName": "Rat",
-      "projectPath": "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Rat\\Rat.csproj",
+      "projectPath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\Rat.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Rat\\obj\\",
       "projectStyle": "PackageReference",
@@ -99,8 +99,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Data Access Layer\\Data Access Layer.csproj": {
-              "projectPath": "C:\\Users\\admin\\Source\\Repos\\Ratgame\\Data Access Layer\\Data Access Layer.csproj"
+            "C:\\Users\\admin\\source\\repos\\Ratgame\\Data Access Layer\\Data Access Layer.csproj": {
+              "projectPath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Data Access Layer\\Data Access Layer.csproj"
             }
           }
         }
