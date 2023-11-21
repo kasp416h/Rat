@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rat", "Rat\Rat.csproj", "{AF719EAF-1EF1-4F78-A2A7-A68B5EEA3151}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access Layer", "Data Access Layer\Data Access Layer.csproj", "{B199EC39-0602-44A2-97D5-A36F25445BC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF719EAF-1EF1-4F78-A2A7-A68B5EEA3151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF719EAF-1EF1-4F78-A2A7-A68B5EEA3151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF719EAF-1EF1-4F78-A2A7-A68B5EEA3151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF719EAF-1EF1-4F78-A2A7-A68B5EEA3151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B199EC39-0602-44A2-97D5-A36F25445BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B199EC39-0602-44A2-97D5-A36F25445BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B199EC39-0602-44A2-97D5-A36F25445BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B199EC39-0602-44A2-97D5-A36F25445BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0443852C-04EC-4A03-89F7-00E82B6E9420}
+	EndGlobalSection
+EndGlobal
