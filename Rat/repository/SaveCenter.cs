@@ -33,10 +33,29 @@ namespace Rat.repository
             SendSave(save);
         }
 
-        public void SendSave(object save)
+        public void SendSave(SaveCenter save)
         {
             JsonHandler Json = new JsonHandler();
-            Json.Write(save);
+
+            Json.SetFilePath("/rats.json");
+            List<Rat> rats = save.Rats;
+            Json.Write(rats);
+
+            Json.SetFilePath("/players.json");
+            List<Player> players = save.Players;
+            Json.Write(players);
+
+            Json.SetFilePath("/tracks.json");
+            List<Track> tracks = save.Tracks;
+            Json.Write(tracks);
+
+            Json.SetFilePath("/races.json");
+            List<Race> races = save.Races;
+            Json.Write(races);
+
+            Json.SetFilePath("/bets.json");
+            List<Bet> bets = save.Bets;
+            Json.Write(bets);
         }
     }
 }
