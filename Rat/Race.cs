@@ -22,7 +22,7 @@ namespace Rat
             int trackLength = RaceTrack.TrackLength;
 
             int heat = 0;
-            while (rats.Any(rat => rat.Posistion < trackLength))
+            while (!rats.Any(rat => rat.Posistion >= trackLength))
             {
                 heat += 1;
                 for (int ratIndex = 0; ratIndex < rats.Count; ratIndex++)
@@ -40,7 +40,7 @@ namespace Rat
         }
         public Rat GetWinner()
         {
-            Rat rat = Rats.FirstOrDefault(rat => rat.Posistion == RaceTrack.TrackLength);
+            Rat rat = Rats.FirstOrDefault(rat => rat.Posistion >= RaceTrack.TrackLength);
             _winner = rat;
             return _winner;
         }
