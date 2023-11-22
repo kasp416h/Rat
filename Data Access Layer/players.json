@@ -2,8 +2,8 @@
   {
     "Name": "Kasper",
     "Password": "123456",
-    "LoggedIn": false,
-    "Money": 1200,
+    "LoggedIn": true,
+    "Money": 1600,
     "Bets": null
   }
 ]
