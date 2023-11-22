@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "R5oIa/N50jYOyqY0Hfw2V+PFeZqLqSAMNlT1nL6V8tF4mKn9RBHvK/rbgTWRmebs7YEraPj/Rchd+Uw1vwAc5Q==",
+  "dgSpecHash": "2kghZZxW96Xfpm5ZEsTc1M83t9FRQq5V3em3A0jZRiVfVc7LwsaoATPH3GqfVXyuUQuT5Ufrkxpe/OuoT5eoag==",
   "success": true,
   "projectFilePath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Data Access Layer\\Data Access Layer.csproj",
   "expectedPackageFiles": [
-    "/Users/kasperhog/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
