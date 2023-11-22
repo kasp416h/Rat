@@ -40,7 +40,7 @@ namespace Rat
         }
         public Rat GetWinner()
         {
-            Rat rat = Rats.FirstOrDefault(rat => rat.Posistion == RaceTrack.TrackLength);
+            Rat rat = Rats.FirstOrDefault(rat => rat.Posistion >= RaceTrack.TrackLength);
             _winner = rat;
             return _winner;
         }

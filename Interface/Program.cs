@@ -63,6 +63,14 @@ class Program
         Console.WriteLine("Race Started");
 
         raceManager.ConductRace(raceManager.Races[racePick - 1]);
+
+        Rat.Rat winner = raceManager.Races[racePick - 1].GetWinner();
+        Console.WriteLine(winner);
+
+        string raceReport = raceManager.ViewRaceReport(raceManager.Races[racePick - 1]);
+        Console.WriteLine(raceReport);
+        Console.ReadLine();
+
     }
 }
 
