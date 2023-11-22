@@ -16,18 +16,6 @@ namespace Rat
 			Money = money;
 			LoggedIn = false;
 		}
-		public string Login(string name, string password)
-		{
-			if (Name != name || _password != password)
-			{
-				return "Navn eller password er forkert";
-			}
-			else
-			{
-				LoggedIn = true;
-				return "Du er nu logget ind";
-			}
-		}
 	}
 }
 

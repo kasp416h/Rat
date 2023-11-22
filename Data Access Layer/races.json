@@ -1,26 +1,32 @@
-﻿[
+[
   {
-    "RaceID": 13211,
-    "rats": [
+    "RaceID": 1,
+    "Rats": [
       {
-        "Name": "Rat1",
-        "Upper": 5,
+        "Name": "Mads",
+        "Posistion": 0,
+        "Upper": 2,
         "Lower": 1
-      },
-      {
-        "Name": "Rat2",
-        "Upper": 7,
-        "Lower": 0
-      },
-      {
-        "Name": "Rat3",
-        "Upper": 4,
-        "Lower": 2
       }
     ],
-    "raceTrack": {
-      "Name": "Flatlines",
-      "trackLength": 30
+    "RaceTrack": {
+      "Name": "Peters rute",
+      "TrackLength": 15
+    }
+  },
+  {
+    "RaceID": 2,
+    "Rats": [
+      {
+        "Name": "Mads",
+        "Posistion": 0,
+        "Upper": 2,
+        "Lower": 1
+      }
+    ],
+    "RaceTrack": {
+      "Name": "Peters rute",
+      "TrackLength": 15
     }
   }
 ]

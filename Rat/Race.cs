@@ -22,7 +22,9 @@ namespace Rat
             int trackLength = RaceTrack.TrackLength;
 
             int heat = 0;
-            while (!rats.Any(rat => rat.Posistion >= trackLength))
+            bool raceIsRunning = true;
+
+            while (raceIsRunning)
             {
                 heat += 1;
                 for (int ratIndex = 0; ratIndex < rats.Count; ratIndex++)
@@ -30,6 +32,12 @@ namespace Rat
                     Rat rat = rats[ratIndex];
                     rat.MoveRat();
                     logRace(rat, heat);
+
+                    if (rat.Posistion >= trackLength)
+                    {
+                        raceIsRunning = false;
+                        break;
+                    }
                 }
             }
 
