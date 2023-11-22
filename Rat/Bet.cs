@@ -18,7 +18,7 @@ namespace Rat
 		{
 			if (winner.Name == _rat.Name && _race.RaceID == race.RaceID)
 			{
-				_player.Money = _money * 2;
+				_player.Money += _money * 2;
 			}
 		}
 	}

@@ -125,6 +125,8 @@ class Program
 
                     Race pickedRace = raceManager.Races[racePick - 1];
 
+                    bookmaker.SetRace(pickedRace);
+
                     for (int ratIndex = 0; ratIndex < pickedRace.Rats.Count; ratIndex++)
                     {
                         Rat.Rat rat = pickedRace.Rats[ratIndex];
@@ -146,8 +148,9 @@ class Program
                             Console.WriteLine("You do not have that much money");
                         } else
                         {
-                            bookmaker.PlaceBet(pickedRace, pickedRat, player, placedMoney);
-                            isBetNotPlaced = true;
+                            Bet bet = bookmaker.PlaceBet(pickedRace, pickedRat, player, placedMoney);
+                            bookmaker.Bets.Add(bet);
+                            isBetNotPlaced = false;
                         }
                     }
 
@@ -155,12 +158,19 @@ class Program
 
                     raceManager.ConductRace(pickedRace);
 
+                    string raceReport = raceManager.ViewRaceReport(raceManager.Races[racePick - 1]);
+                    Console.WriteLine(raceReport);
+
                     Rat.Rat winner = raceManager.Races[racePick - 1].GetWinner();
                     Console.WriteLine(winner);
 
-                    string raceReport = raceManager.ViewRaceReport(raceManager.Races[racePick - 1]);
-                    Console.WriteLine(raceReport);
-                    Console.ReadLine();
+                    Console.WriteLine(player.Money);
+
+                    bookmaker.PayOutWinnings(winner);
+
+                    Console.WriteLine(player.Money);
+
+
                     break;
             }
         }

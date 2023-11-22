@@ -40,17 +40,12 @@ namespace Rat
                     }
                 }
             }
-
-            foreach (Rat rat in rats)
-            {
-                rat.ResetRat();
-            }
         }
         public Rat GetWinner()
         {
             Rat rat = Rats.FirstOrDefault(rat => rat.Posistion >= RaceTrack.TrackLength);
             _winner = rat;
-            return _winner;
+            return rat;
         }
         public string GetRaceReport()
         {

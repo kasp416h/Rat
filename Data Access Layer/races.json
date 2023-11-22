@@ -4,7 +4,7 @@
     "Rats": [
       {
         "Name": "Mads",
-        "Posistion": 0,
+        "Posistion": 15,
         "Upper": 2,
         "Lower": 1
       }
@@ -25,7 +25,7 @@
       }
     ],
     "RaceTrack": {
-      "Name": "Peters rute",
+      "Name": "Peterse",
       "TrackLength": 15
     }
   }
