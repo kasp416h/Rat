@@ -19,7 +19,7 @@ public class JsonHandler
     public void Write<T>(List<T> entities)
     {
         string updatedFileContent = JsonConvert.SerializeObject(entities, Formatting.Indented);
-
+        
         File.WriteAllText(_filePath, updatedFileContent);
     }
 }

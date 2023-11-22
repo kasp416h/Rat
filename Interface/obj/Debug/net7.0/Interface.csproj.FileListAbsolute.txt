@@ -1,0 +1,21 @@
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Interface
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Interface.deps.json
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Interface.runtimeconfig.json
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Interface.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Interface.pdb
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.csproj.AssemblyReference.cache
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.AssemblyInfoInputs.cache
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.AssemblyInfo.cs
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.csproj.CoreCompileInputs.cache
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.dll
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/refint/Interface.dll
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.pdb
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.genruntimeconfig.cache
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/ref/Interface.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Data Access Layer.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Rat.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Rat.pdb
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Data Access Layer.pdb
+/Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.csproj.CopyComplete

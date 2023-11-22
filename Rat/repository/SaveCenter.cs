@@ -25,6 +25,11 @@ namespace Rat.repository
             Bets = bets;
         }
 
+        public SaveCenter()
+        {
+
+        }
+
         public void CreateSave()
         {
             RaceManager manager = new RaceManager();
@@ -32,11 +37,55 @@ namespace Rat.repository
             SaveCenter save = new SaveCenter(manager.Rats, manager.Players, manager.Tracks, manager.Races, book.Bets);
             SendSave(save);
         }
-
-        public void SendSave(object save)
+        public SaveCenter LoadData()
         {
             JsonHandler Json = new JsonHandler();
-            Json.Write(save);
+            string basePath = "/Users/kasperhog/Projects/Rat/Data Access Layer";
+
+            Json.SetFilePath(basePath + "/rats.json");
+            List<Rat> rats = Json.Read<Rat>();
+
+            Json.SetFilePath(basePath + "/players.json");
+            List<Player> players = Json.Read<Player>();
+
+            Json.SetFilePath(basePath + "/tracks.json");
+            List<Track> tracks = Json.Read<Track>();
+
+            Json.SetFilePath(basePath + "/races.json");
+            List<Race> races = Json.Read<Race>();
+
+            Json.SetFilePath(basePath + "/bets.json");
+            List<Bet> bets = Json.Read<Bet>();
+
+            SaveCenter save = new SaveCenter(rats, players, tracks, races, bets);
+
+            return save;
         }
+
+        public void SendSave(SaveCenter save)
+        {
+            JsonHandler Json = new JsonHandler();
+
+            Json.SetFilePath("/rats.json");
+            List<Rat> rats = save.Rats;
+            Json.Write(rats);
+
+            Json.SetFilePath("/players.json");
+            List<Player> players = save.Players;
+            Json.Write(players);
+
+            Json.SetFilePath("/tracks.json");
+            List<Track> tracks = save.Tracks;
+            Json.Write(tracks);
+
+            Json.SetFilePath("/races.json");
+            List<Race> races = save.Races;
+            Json.Write(races);
+
+            Json.SetFilePath("/bets.json");
+            List<Bet> bets = save.Bets;
+            Json.Write(bets);
+        }
+
     }
 }
