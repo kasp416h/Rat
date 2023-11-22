@@ -14,7 +14,6 @@ public class RaceManager
     public Track CreateTrack(string name, int trackLength)
     {
         Track track = new Track(name, trackLength);
-
         return track;
     }
     public void ConductRace(Race race)

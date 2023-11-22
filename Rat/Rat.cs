@@ -21,7 +21,7 @@ namespace Rat
         public int MoveRat()
         {
             int randomNumber = RNG.Range(Upper, Lower);
-            Posistion = randomNumber;
+            Posistion += randomNumber;
             return Posistion;
         }
     }
