@@ -30,11 +30,9 @@ namespace Rat.repository
 
         }
 
-        public void CreateSave()
+        public void CreateSave(RaceManager raceManager, Bookmaker bookmaker)
         {
-            RaceManager manager = new RaceManager();
-            Bookmaker book = new Bookmaker();
-            SaveCenter save = new SaveCenter(manager.Rats, manager.Players, manager.Tracks, manager.Races, book.Bets);
+            SaveCenter save = new SaveCenter(raceManager.Rats, raceManager.Players, raceManager.Tracks, raceManager.Races, bookmaker.Bets);
             SendSave(save);
         }
         public SaveCenter LoadData()
@@ -65,24 +63,25 @@ namespace Rat.repository
         public void SendSave(SaveCenter save)
         {
             JsonHandler Json = new JsonHandler();
+            string basePath = "/Users/kasperhog/Projects/Rat/Data Access Layer";
 
-            Json.SetFilePath("/rats.json");
+            Json.SetFilePath(basePath + "/rats.json");
             List<Rat> rats = save.Rats;
             Json.Write(rats);
 
-            Json.SetFilePath("/players.json");
+            Json.SetFilePath(basePath + "/players.json");
             List<Player> players = save.Players;
             Json.Write(players);
 
-            Json.SetFilePath("/tracks.json");
+            Json.SetFilePath(basePath + "/tracks.json");
             List<Track> tracks = save.Tracks;
             Json.Write(tracks);
 
-            Json.SetFilePath("/races.json");
+            Json.SetFilePath(basePath + "/races.json");
             List<Race> races = save.Races;
             Json.Write(races);
 
-            Json.SetFilePath("/bets.json");
+            Json.SetFilePath(basePath + "/bets.json");
             List<Bet> bets = save.Bets;
             Json.Write(bets);
         }

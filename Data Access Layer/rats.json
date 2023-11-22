@@ -1,16 +1,13 @@
-﻿[
+[
   {
-    "Name": "Rat1",
-    "Upper": 5,
+    "Name": "Mads",
+    "Posistion": 0,
+    "Upper": 2,
     "Lower": 1
   },
   {
-    "Name": "Rat2",
-    "Upper": 7,
-    "Lower": 0
-  },
-  {
-    "Name": "Rat3",
+    "Name": "Ikhvan",
+    "Posistion": 0,
     "Upper": 4,
     "Lower": 2
   }

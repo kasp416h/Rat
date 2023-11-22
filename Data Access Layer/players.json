@@ -1,7 +1,9 @@
-﻿[
+[
   {
-    "name": "Kasper",
-    "password": "123456",
-    "money": 100
+    "Name": "Kasper",
+    "Password": "123456",
+    "LoggedIn": true,
+    "Money": 1600,
+    "Bets": null
   }
 ]

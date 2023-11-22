@@ -22,7 +22,9 @@ namespace Rat
             int trackLength = RaceTrack.TrackLength;
 
             int heat = 0;
-            while (!rats.Any(rat => rat.Posistion >= trackLength))
+            bool raceIsRunning = true;
+
+            while (raceIsRunning)
             {
                 heat += 1;
                 for (int ratIndex = 0; ratIndex < rats.Count; ratIndex++)
@@ -30,19 +32,20 @@ namespace Rat
                     Rat rat = rats[ratIndex];
                     rat.MoveRat();
                     logRace(rat, heat);
-                }
-            }
 
-            foreach (Rat rat in rats)
-            {
-                rat.ResetRat();
+                    if (rat.Posistion >= trackLength)
+                    {
+                        raceIsRunning = false;
+                        break;
+                    }
+                }
             }
         }
         public Rat GetWinner()
         {
             Rat rat = Rats.FirstOrDefault(rat => rat.Posistion >= RaceTrack.TrackLength);
             _winner = rat;
-            return _winner;
+            return rat;
         }
         public string GetRaceReport()
         {
