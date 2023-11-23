@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "v9eisEhEyE828lDCmaeZKWSbp3RMT1vrwyuHAh4YV12l09KZlIcsZI/liHgDk1sD0RE92sp/PnOt3pse1DXuXA==",
+  "dgSpecHash": "LQIo8jq+rpSH3qV5rwWw1XzqOhRkHmGC5AgKRXIw0HV3Ou7D7l+LlOfsx+BrzUC1MNvm2nUuFGhxcTqtLQZFhQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\Rat.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\dapper\\2.1.24\\dapper.2.1.24.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
