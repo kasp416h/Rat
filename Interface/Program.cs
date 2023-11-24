@@ -21,7 +21,6 @@ class Program
         {
             Console.WriteLine("Options");
 
-
             Console.WriteLine("1. Create Race");
             Console.WriteLine("2. Create Track");
             Console.WriteLine("3. Create Rat");
@@ -170,7 +169,6 @@ class Program
 
                     Console.WriteLine(player.Money);
 
-
                     break;
             }
         }
@@ -213,7 +211,7 @@ class Program
 
         foreach (Player player in raceManager.Players)
         {
-            if (name.ToLower() != player.Name.ToLower() || password != player.Password)
+            if (name.ToLower().Trim() != player.Name.ToLower() || password.Trim() != player.Password)
             {
                 Console.WriteLine("Enten navn eller password er forkert");
             }
