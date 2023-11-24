@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Rat
+namespace DLL
 {
     public class Race
     {

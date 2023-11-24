@@ -1,4 +1,4 @@
-﻿namespace Rat;
+﻿namespace DLL;
 
 public class RaceManager
 {

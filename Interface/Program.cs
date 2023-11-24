@@ -1,5 +1,5 @@
-﻿using Rat;
-using Rat.repository;
+﻿using DLL;
+using DLL.repository;
 
 namespace Interface;
 
@@ -24,7 +24,7 @@ class Program
 
             Console.WriteLine("1. Create Race");
             Console.WriteLine("2. Create Track");
-            Console.WriteLine("3. Create Rat");
+            Console.WriteLine("3. Create DLL");
             Console.WriteLine("4. Save game");
             Console.WriteLine("5. Exit game");
             Console.WriteLine("6. Pick a race");
@@ -43,7 +43,7 @@ class Program
                     }
 
                     bool isPlayerStillChoosing = true;
-                    List<Rat.Rat> temporaryRats = new List<Rat.Rat>();
+                    List<DLL.Rat> temporaryRats = new List<DLL.Rat>();
 
                     Console.WriteLine("Choose a rat");
 
@@ -51,7 +51,7 @@ class Program
                     {
                         for (int ratIndex = 0; ratIndex < raceManager.Rats.Count; ratIndex++)
                         {
-                            Rat.Rat rat = raceManager.Rats[ratIndex];
+                            DLL.Rat rat = raceManager.Rats[ratIndex];
                             Console.WriteLine((ratIndex + 1) + ". " + rat.Name);
                         }
 
@@ -105,7 +105,7 @@ class Program
                     Console.WriteLine("Give the rat a maximum speed");
                     int upper = Int32.Parse(Console.ReadLine());
 
-                    Rat.Rat createdRat = raceManager.CreateRat(ratName, upper, lower);
+                    DLL.Rat createdRat = raceManager.CreateRat(ratName, upper, lower);
                     raceManager.Rats.Add(createdRat);
                     break;
                 case 4:
@@ -129,13 +129,13 @@ class Program
 
                     for (int ratIndex = 0; ratIndex < pickedRace.Rats.Count; ratIndex++)
                     {
-                        Rat.Rat rat = pickedRace.Rats[ratIndex];
+                        DLL.Rat rat = pickedRace.Rats[ratIndex];
                         Console.WriteLine((ratIndex + 1) + ". " + rat.Name);
                     }
 
                     int ratOption = Int32.Parse(Console.ReadLine());
 
-                    Rat.Rat pickedRat = pickedRace.Rats[ratOption - 1];
+                    DLL.Rat pickedRat = pickedRace.Rats[ratOption - 1];
 
                     bool isBetNotPlaced = true;
 
@@ -161,7 +161,7 @@ class Program
                     string raceReport = raceManager.ViewRaceReport(raceManager.Races[racePick - 1]);
                     Console.WriteLine(raceReport);
 
-                    Rat.Rat winner = raceManager.Races[racePick - 1].GetWinner();
+                    DLL.Rat winner = raceManager.Races[racePick - 1].GetWinner();
                     Console.WriteLine(winner);
 
                     Console.WriteLine(player.Money);
@@ -193,7 +193,7 @@ class Program
             raceManager.CreateTrack(track.Name, track.TrackLength);
         }
 
-        foreach (Rat.Rat rat in saveData.Rats)
+        foreach (DLL.Rat rat in saveData.Rats)
         {
             raceManager.CreateRat(rat.Name, rat.Upper, rat.Lower);
         }

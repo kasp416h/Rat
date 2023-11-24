@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Schema;
 using Data_Access_Layer;
 
-namespace Rat.repository
+namespace DLL.repository
 {
     public class SaveCenter
     {
@@ -37,53 +37,33 @@ namespace Rat.repository
         }
         public SaveCenter LoadData()
         {
-            JsonHandler Json = new JsonHandler();
-            string basePath = "/Users/kasperhog/Projects/Rat/Data Access Layer";
+;
 
-            Json.SetFilePath(basePath + "/rats.json");
-            List<Rat> rats = Json.Read<Rat>();
-
-            Json.SetFilePath(basePath + "/players.json");
-            List<Player> players = Json.Read<Player>();
-
-            Json.SetFilePath(basePath + "/tracks.json");
-            List<Track> tracks = Json.Read<Track>();
-
-            Json.SetFilePath(basePath + "/races.json");
-            List<Race> races = Json.Read<Race>();
-
-            Json.SetFilePath(basePath + "/bets.json");
-            List<Bet> bets = Json.Read<Bet>();
-
-            SaveCenter save = new SaveCenter(rats, players, tracks, races, bets);
+            SaveCenter save = new SaveCenter();
 
             return save;
         }
 
         public void SendSave(SaveCenter save)
         {
-            JsonHandler Json = new JsonHandler();
-            string basePath = "/Users/kasperhog/Projects/Rat/Data Access Layer";
-
-            Json.SetFilePath(basePath + "/rats.json");
-            List<Rat> rats = save.Rats;
-            Json.Write(rats);
-
-            Json.SetFilePath(basePath + "/players.json");
-            List<Player> players = save.Players;
-            Json.Write(players);
-
-            Json.SetFilePath(basePath + "/tracks.json");
-            List<Track> tracks = save.Tracks;
-            Json.Write(tracks);
-
-            Json.SetFilePath(basePath + "/races.json");
-            List<Race> races = save.Races;
-            Json.Write(races);
-
-            Json.SetFilePath(basePath + "/bets.json");
-            List<Bet> bets = save.Bets;
-            Json.Write(bets);
+            DatabaseSave DBsave = new DatabaseSave();
+            
+            foreach(Rat rat in save.Rats)
+            {
+                DBsave.SaveRat(rat.Name, rat.Posistion, rat.Upper, rat.Lower);
+            }
+            foreach (Player player in save.Players)
+            {
+                DBsave.SavePlayer(player.Name, player.Password, player.LoggedIn, player.Money);
+            }
+            foreach (Track track in save.Tracks)
+            {
+                DBsave.SaveTrack(track.Name, track.TrackLength);
+            }
+            foreach (Bet bet in save.Bets)
+            {
+                DBsave.SaveBet(1);
+            }
         }
 
     }

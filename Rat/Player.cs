@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Rat
+namespace DLL
 {
 	public class Player
 	{

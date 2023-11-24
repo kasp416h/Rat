@@ -19,3 +19,31 @@
 /Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Rat.pdb
 /Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Data Access Layer.pdb
 /Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.csproj.CopyComplete
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\Interface.exe
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\Interface.deps.json
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\Interface.runtimeconfig.json
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\Interface.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\Interface.pdb
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\Dapper.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\Data Access Layer.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\Data Access Layer.pdb
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.AssemblyInfo.cs
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.csproj.CopyComplete
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.dll
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\refint\Interface.dll
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.pdb
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.genruntimeconfig.cache
+C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\ref\Interface.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\DLL.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\DLL.pdb

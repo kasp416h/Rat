@@ -40,9 +40,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.24, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             }
           },
           "imports": [
@@ -89,8 +97,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\Rat.csproj": {
-                "projectPath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\Rat.csproj"
+              "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\DLL.csproj": {
+                "projectPath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\DLL.csproj"
               }
             }
           }
@@ -124,12 +132,12 @@
         }
       }
     },
-    "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\Rat.csproj": {
+    "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\DLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\Rat.csproj",
-        "projectName": "Rat",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\Rat.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\DLL.csproj",
+        "projectName": "DLL",
+        "projectPath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\DLL.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\obj\\",
         "projectStyle": "PackageReference",
