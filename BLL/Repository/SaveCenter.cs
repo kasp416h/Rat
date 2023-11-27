@@ -61,7 +61,7 @@ namespace BLL.Repository
             }
             foreach (Bet bet in save.Bets)
             {
-                DBsave.SaveBet(Bet);
+                DBsave.SaveBet(bet.Money);
             }
         }
 

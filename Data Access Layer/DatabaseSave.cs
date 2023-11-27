@@ -43,7 +43,7 @@ namespace Data_Access_Layer
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
             {
                 connection.Query("dbo.SetBet @BetMoney",
-                new { });
+                new {BetMoney = money });
             }
         }
     }
