@@ -1,5 +1,5 @@
-﻿using DLL;
-using DLL.repository;
+﻿using BLL.Repository;
+using DLL;
 
 namespace Interface;
 
@@ -7,8 +7,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        SaveCenter save = new SaveCenter();
-        SaveCenter saveData = save.LoadData();
+        SaveCenter saveData = new SaveCenter();
 
         RaceManager raceManager = new RaceManager();
         Bookmaker bookmaker = new Bookmaker();

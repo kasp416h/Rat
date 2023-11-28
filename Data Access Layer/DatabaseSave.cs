@@ -46,5 +46,53 @@ namespace Data_Access_Layer
                 new {BetMoney = money });
             }
         }
+
+        public List<object> GetRats()
+        {
+            List<object> rats= new List<object>();
+
+            using(IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
+            {
+            rats = connection.Query<object>("dbo.GetAllRats", new {}).ToList();
+            }
+
+            return rats;
+        }
+
+        public List<object> GetTracks()
+        {
+            List<object> tracks = new List<object>();
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
+            {
+                tracks = connection.Query<object>("dbo.GetAllTracks", new { }).ToList();
+            }
+
+            return tracks;
+        }
+
+        public List<object> GetPlayers()
+        {
+            List<object> players = new List<object>();
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
+            {
+                players = connection.Query<object>("dbo.GetAllPlayers", new { }).ToList();
+            }
+
+            return players;
+        }
+
+        public object GetRace()
+        {
+            List<object> players = new List<object>();
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
+            {
+                players = connection.Query<object>("dbo.GetAllPlayers", new { }).ToList();
+            }
+
+            return players;
+        }
     }
 }

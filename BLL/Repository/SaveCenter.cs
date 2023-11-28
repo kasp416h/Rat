@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Repository
 {
-    public class SaveCenter
+    public class SaveCenter : IRepository
     {
         public List<Rat> Rats = new List<Rat>();
         public List<Player> Players = new List<Player>();
@@ -16,7 +16,7 @@ namespace BLL.Repository
         public List<Race> Races = new List<Race>();
         public List<Bet> Bets = new List<Bet>();
 
-        public SaveCenter(List<Rat> rats, List<Player> players, List<Track> tracks, List<Race> races, List<Bet> bets)
+        public SaveCenter(RaceManager raceManeger, List<Bet> bets)
         {
             Rats = rats;
             Players = players;
@@ -43,23 +43,23 @@ namespace BLL.Repository
             return save;
         }
 
-        public void SendSave(SaveCenter save)
+        public void SendData(RaceManager rm)
         {
             DatabaseSave DBsave = new DatabaseSave();
 
-            foreach (Rat rat in save.Rats)
+            foreach (Rat rat in Rats)
             {
                 DBsave.SaveRat(rat.Name, rat.Posistion, rat.Upper, rat.Lower);
             }
-            foreach (Player player in save.Players)
+            foreach (Player player in Players)
             {
                 DBsave.SavePlayer(player.Name, player.Password, player.LoggedIn, player.Money);
             }
-            foreach (Track track in save.Tracks)
+            foreach (Track track in Tracks)
             {
                 DBsave.SaveTrack(track.Name, track.TrackLength);
             }
-            foreach (Bet bet in save.Bets)
+            foreach (Bet bet in Bets)
             {
                 DBsave.SaveBet(bet.Money);
             }
