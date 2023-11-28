@@ -111,7 +111,7 @@ class Program
                     break;
                 case 4:
                     Maneger maneger = new Maneger();
-                    maneger.callsave();
+                    maneger.Sendsave();
                     break;
                 case 5:
                     player.LoggedIn = false;

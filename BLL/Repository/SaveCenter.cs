@@ -1,6 +1,6 @@
-﻿using Data_Access_Layer;
-using DLL;
+﻿using DLL;
 using DLL.Modles;
+using Data_Access_Layer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,10 +33,12 @@ namespace BLL.Repository
 
         public SaveCenter LoadData()
         {
-
-            SaveCenter save = new SaveCenter();
-
-            return save;
+            DatabaseSave DBsave = new DatabaseSave();
+            DBsave.GetRats();
+            DBsave.GetPlayers();
+            DBsave.GetTracks();
+            DBsave.GetRaces();
+            
         }
 
         public void SendData(RaceManager raceManager, List<Bet> Bets)

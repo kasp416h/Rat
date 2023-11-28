@@ -7,6 +7,7 @@ using Dapper;
 using System.Data;
 using System.Xml.Linq;
 using DLL.Modles;
+using DLL;
 
 namespace Data_Access_Layer
 {
@@ -48,52 +49,92 @@ namespace Data_Access_Layer
             }
         }
 
-        public List<object> GetRats()
+        public List<Rat> GetRats()
         {
-            List<object> rats= new List<object>();
+            List<Rat> rats= new List<Rat>();
 
             using(IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
             {
-            rats = connection.Query<object>("dbo.GetAllRats", new {}).ToList();
+            rats = connection.Query<Rat>("dbo.GetAllRats", new {}).ToList();
             }
 
             return rats;
         }
 
-        public List<object> GetTracks()
+        public List<Track> GetTracks()
         {
-            List<object> tracks = new List<object>();
+            List<Track> tracks = new List<Track>();
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
             {
-                tracks = connection.Query<object>("dbo.GetAllTracks", new { }).ToList();
+                tracks = connection.Query<Track>("dbo.GetAllTracks", new { }).ToList();
             }
 
             return tracks;
         }
 
-        public List<object> GetPlayers()
+        public List<Player> GetPlayers()
         {
-            List<object> players = new List<object>();
+            List<Player> players = new List<Player>();
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
             {
-                players = connection.Query<object>("dbo.GetAllPlayers", new { }).ToList();
+                players = connection.Query<Player>("dbo.GetAllPlayers", new { }).ToList();
             }
 
             return players;
         }
 
-        public object GetRace()
+        public List<Race> GetRaces()
         {
-            List<object> players = new List<object>();
+            List<Race> races = new List<Race>();
+            List<int> raceIds = new List<int>();
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
             {
-                players = connection.Query<object>("dbo.GetAllPlayers", new { }).ToList();
+                raceIds = connection.Query<int>("dbo.GetAllRaceId", new { }).ToList();
+
+                foreach(int i in raceIds)
+                {
+                    Track tempuraltrack = (Track)connection.Query("dbo.GetRaceTrack", new { i });
+
+                    List<Rat> tempuralrats = connection.Query<Rat>("dbo.GetRaceRats", new { i }).ToList();
+
+                    Race newrace = new Race(i, tempuralrats, tempuraltrack);
+
+                    races.Add(newrace);
+                }
             }
 
-            return players;
+            return races;
+        }
+
+        public List<Bet> GetBets()
+        {
+            List<Bet> Bets = new List<Bet>();
+            List<Race> AllRaces = GetRaces();
+
+            using(IDbConnection connection = System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
+            {
+                List<int> BetIds = connection.Query<int>("dbo.GetAllBetId", new {}).ToList();
+
+                foreach(int i in BetIds)
+                {
+                    Player tempuralplayer = (Player)connection.Query("dbo.GetBetPlayer", new {i});
+
+                    Rat tempuralrat = (Rat)connection.Query("dbo.GatBetRat", new {i});
+
+                    int BetMoney = Convert.ToInt32(connection.Query("dbo.GetBetMoney", new {i}));
+
+                    int tempuralRaceId = Convert.ToInt32(connection.Query("dbo.GetBetRaceId", new {i}));
+
+                    AllRaces.Where()
+
+                    Bet newbet = new Bet(BetMoney, tempuralplayer,  , tempuralrat);
+                }
+            }
+
+            return Bets;
         }
     }
 }

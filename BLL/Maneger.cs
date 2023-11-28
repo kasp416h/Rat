@@ -18,11 +18,15 @@ namespace BLL
             RaceManager = new RaceManager();
         }
 
-        public void callsave()
+        public void Sendsave()
         {
             Bookmaker bookmaker = new Bookmaker();
             repo.SendData(RaceManager, bookmaker.Bets);
         }
 
+        public void GetSave()
+        {
+            repo.LoadData();
+        }
     }
 }

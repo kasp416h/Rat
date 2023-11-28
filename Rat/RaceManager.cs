@@ -8,6 +8,7 @@ public class RaceManager
     public List<Player> Players { get; set; }
     public List<Race> Races { get; set; }
     public List<Rat> Rats { get; set; }
+
     public Race CreateRace(int raceID, List<Rat> rats, Track track)
     {
         Race race = new Race(raceID, rats, track);

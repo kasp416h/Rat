@@ -108,7 +108,8 @@
       "System.Security.Principal.Windows/4.7.0": {},
       "BLL/1.0.0": {
         "dependencies": {
-          "DLL": "1.0.0"
+          "DLL": "1.0.0",
+          "Data Access Layer": "1.0.0"
         },
         "runtime": {
           "BLL.dll": {}
@@ -116,6 +117,7 @@
       },
       "Data Access Layer/1.0.0": {
         "dependencies": {
+          "DLL": "1.0.0",
           "Dapper": "2.1.24",
           "Newtonsoft.Json": "13.0.3",
           "System.Data.SqlClient": "4.8.5"
@@ -126,8 +128,7 @@
       },
       "DLL/1.0.0": {
         "dependencies": {
-          "Dapper": "2.1.24",
-          "Data Access Layer": "1.0.0"
+          "Dapper": "2.1.24"
         },
         "runtime": {
           "DLL.dll": {}
