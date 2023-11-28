@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Dapper;
 using System.Data;
 using System.Xml.Linq;
+using DLL.Modles;
 
 namespace Data_Access_Layer
 {

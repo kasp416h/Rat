@@ -1,4 +1,6 @@
-﻿namespace DLL;
+﻿using DLL.Modles;
+
+namespace DLL;
 
 public class RaceManager
 {

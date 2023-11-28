@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace DLL
+namespace DLL.Modles
 {
     public class Race
     {
@@ -53,7 +53,7 @@ namespace DLL
         }
         private void logRace(Rat rat, int heat)
         {
-            _log += String.Format("Heat {0}.{1}-{2} ", heat, rat.Name, rat.Posistion);
+            _log += string.Format("Heat {0}.{1}-{2} ", heat, rat.Name, rat.Posistion);
         }
     }
 }

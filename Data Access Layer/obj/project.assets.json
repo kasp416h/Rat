@@ -172,6 +172,19 @@
             "rid": "win"
           }
         }
+      },
+      "DLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Dapper": "2.1.24"
+        },
+        "compile": {
+          "bin/placeholder/DLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DLL.dll": {}
+        }
       }
     }
   },
@@ -539,10 +552,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "DLL/1.0.0": {
+      "type": "project",
+      "path": "../Rat/DLL.csproj",
+      "msbuildProject": "../Rat/DLL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "DLL >= 1.0.0",
       "Dapper >= 2.1.24",
       "Newtonsoft.Json >= 13.0.3",
       "System.Data.SqlClient >= 4.8.5"
@@ -574,7 +593,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\DLL.csproj": {
+              "projectPath": "C:\\Users\\admin\\source\\repos\\Ratgame\\Rat\\DLL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -47,3 +47,5 @@ C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\Interface.genrunt
 C:\Users\admin\source\repos\Ratgame\Interface\obj\Debug\net7.0\ref\Interface.dll
 C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\DLL.dll
 C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\DLL.pdb
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\BLL.dll
+C:\Users\admin\source\repos\Ratgame\Interface\bin\Debug\net7.0\BLL.pdb

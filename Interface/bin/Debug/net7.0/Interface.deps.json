@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "Interface/1.0.0": {
         "dependencies": {
+          "BLL": "1.0.0",
           "DLL": "1.0.0"
         },
         "runtime": {
@@ -105,6 +106,14 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
+      "BLL/1.0.0": {
+        "dependencies": {
+          "DLL": "1.0.0"
+        },
+        "runtime": {
+          "BLL.dll": {}
+        }
+      },
       "Data Access Layer/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.24",
@@ -208,6 +217,11 @@
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
+    },
+    "BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Data Access Layer/1.0.0": {
       "type": "project",

@@ -1,5 +1,6 @@
 ﻿using System;
-namespace DLL
+
+namespace DLL.Modles
 {
     public class Rat
     {

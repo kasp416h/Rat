@@ -5,10 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Data Access Layer\Data Access Layer.csproj" />
-  </ItemGroup>
   <ItemGroup>
     <None Remove="repository\" />
   </ItemGroup>
