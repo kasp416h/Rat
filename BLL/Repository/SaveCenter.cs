@@ -18,10 +18,10 @@ namespace BLL.Repository
 
         public SaveCenter(RaceManager raceManeger, List<Bet> bets)
         {
-            Rats = rats;
-            Players = players;
-            Tracks = tracks;
-            Races = races;
+            Rats = raceManeger.Rats;
+            Players = raceManeger.Players;
+            Tracks = raceManeger.Tracks;
+            Races = raceManeger.Races;
             Bets = bets;
         }
 
@@ -30,11 +30,6 @@ namespace BLL.Repository
 
         }
 
-        public void CreateSave(RaceManager raceManager, Bookmaker bookmaker)
-        {
-            SaveCenter save = new SaveCenter(raceManager.Rats, raceManager.Players, raceManager.Tracks, raceManager.Races, bookmaker.Bets);
-            SendSave(save);
-        }
         public SaveCenter LoadData()
         {
 
@@ -43,7 +38,7 @@ namespace BLL.Repository
             return save;
         }
 
-        public void SendData(RaceManager rm)
+        public void SendData(RaceManager raceManager, List<Bet> Bets)
         {
             DatabaseSave DBsave = new DatabaseSave();
 

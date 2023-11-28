@@ -11,6 +11,6 @@ namespace BLL
     public interface IRepository
     {
         public SaveCenter LoadData();
-        public void SendData(RaceManager rm);
+        public void SendData(RaceManager raceManager, List<Bet> bet);
     }
 }

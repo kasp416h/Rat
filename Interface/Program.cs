@@ -1,4 +1,5 @@
-﻿using BLL.Repository;
+﻿using BLL;
+using BLL.Repository;
 using DLL;
 
 namespace Interface;
@@ -108,7 +109,8 @@ class Program
                     raceManager.Rats.Add(createdRat);
                     break;
                 case 4:
-                    save.CreateSave(raceManager, bookmaker);
+                    Maneger maneger = new Maneger();
+                    maneger.callsave();
                     break;
                 case 5:
                     player.LoggedIn = false;

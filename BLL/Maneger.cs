@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Repository;
+using DLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,21 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class Maneger
+    public class Maneger
     {
+        public RaceManager RaceManager;
+        public IRepository repo;
+        public Maneger()
+        {
+            repo = new SaveCenter();
+            RaceManager = new RaceManager();
+        }
+
+        public void callsave()
+        {
+            Bookmaker bookmaker = new Bookmaker();
+            repo.SendData(RaceManager, bookmaker.Bets);
+        }
+
     }
 }
