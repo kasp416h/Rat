@@ -16,6 +16,10 @@ namespace Rat
             Rats = rats;
             RaceTrack = raceTrack;
         }
+        public Race()
+        {
+
+        }
         public void ConductRace()
         {
             List<Rat> rats = Rats;

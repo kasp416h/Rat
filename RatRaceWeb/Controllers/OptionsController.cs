@@ -4,7 +4,6 @@ using RatRaceWeb.services;
 using RatRaceWeb.Models;
 using RatRaceWeb.Models.ViewModels;
 using Rat;
-using Microsoft.AspNetCore.Identity;
 
 namespace RatRaceWeb.Controllers
 {
@@ -40,6 +39,22 @@ namespace RatRaceWeb.Controllers
         public IActionResult PickRace()
         {
             ViewData["AvailableRaces"] = _raceManagerService.RaceManager.Races;
+            ViewData["PlayerMoney"] = _raceManagerService.CurrentPlayer.Money;
+
+            return View();
+        }
+
+        public IActionResult Race(Race selectedRace)
+        {
+            _raceManagerService.RaceManager.ConductRace(selectedRace);
+
+            string raceReport = _raceManagerService.RaceManager.ViewRaceReport(selectedRace);
+            ViewData["RaceReport"] = raceReport;
+
+            Rat.Rat winner = selectedRace.GetWinner();
+            ViewData["Winner"] = winner;
+            
+            _raceManagerService.Bookmaker.PayOutWinnings(winner);
 
             return View();
         }
@@ -124,6 +139,31 @@ namespace RatRaceWeb.Controllers
         {
             _raceManagerService.LogOut();
             return Redirect("/");
+        }
+
+        [HttpPost]
+        public IActionResult PlaceBet(PlaceBet placebet)
+        {
+            int raceId = Int32.Parse(placebet.SelectedRace);
+            Race selectedRace = _raceManagerService.RaceManager.Races.FirstOrDefault(race => race.RaceID == raceId);
+
+            string selectedRatName = placebet.SelectedRat;
+            Rat.Rat selectedRat = _raceManagerService.RaceManager.Rats.FirstOrDefault(rat => rat.Name == selectedRatName);
+
+            int betAmount = placebet.money;
+
+            if (selectedRace == null || selectedRat == null || betAmount < 1 || betAmount > _raceManagerService.CurrentPlayer.Money)
+            {
+                return RedirectToAction("PlaceBet");
+            }
+
+            Bookmaker bookmaker = _raceManagerService.Bookmaker;
+
+            bookmaker.SetRace(selectedRace);
+            Bet bet = bookmaker.PlaceBet(selectedRace, selectedRat, _raceManagerService.CurrentPlayer, betAmount);
+            bookmaker.Bets.Add(bet);
+
+            return RedirectToAction("Race", selectedRace);
         }
 
         [HttpGet]

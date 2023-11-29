@@ -1,5 +1,5 @@
 ﻿@using RatRaceWeb.Models.ViewModels
-
+@model PlaceBet
 
 @{
     ViewData["Title"] = "Pick Race";
@@ -24,7 +24,7 @@
                 });
             }
         }
-        @Html.DropDownList("RaceList", raceListItems, new { @class = "form-control", id = "raceDropdown" })
+        @Html.DropDownList("SelectedRace", raceListItems, new { @class = "form-control", id = "raceDropdown" })
     </div>
 
     <div style="display: flex; flex-direction: column;">
@@ -33,8 +33,12 @@
         </select>
     </div>
 
-    <label for="trackLength">TrackLength:</label>
-    <input type="text" id="trackLength" name="trackLength" required>
+    <p style="margin-top: 20px;">Available money @ViewData["PlayerMoney"]</p>
+
+    <label for="money">Bet amount:</label>
+    <input type="text" id="money" name="money" required>
+
+    <button type="submit">Place Bet</button>
 </form>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
