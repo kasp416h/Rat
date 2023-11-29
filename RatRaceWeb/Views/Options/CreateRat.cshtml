@@ -1,0 +1,23 @@
+﻿@using RatRaceWeb.Models.ViewModels
+@model CreateRatViewModel
+
+@{
+    ViewData["Title"] = "Create Rat";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" asp-action="CreateRat">
+    <div style="margin-bottom: 20px;">
+        <label for="ratName">RatName:</label>
+        <input type="text" id="ratName" name="ratName" required>
+
+        <label for="lower">Lower:</label>
+        <input type="text" id="lower" name="lower" required>
+
+        <label for="upper">Upper:</label>
+        <input type="text" id="upper" name="upper" required>
+    </div>
+
+    <button type="submit">Create Rat</button>
+</form>

@@ -7,17 +7,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        SaveCenter save = new SaveCenter();
+        SaveCenterMongoDB save = new SaveCenterMongoDB("RatRace", "mongodb+srv://kasp416h:xhy72pvvKM@cluster0.mrfn8h3.mongodb.net/?retryWrites=true&w=majority");
         SaveCenter saveData = save.LoadData();
 
-        RaceManager raceManager = new RaceManager();
+        RaceManager raceManager = new RaceManager(saveData.Tracks, saveData.Players, saveData.Races, saveData.Rats);
         Bookmaker bookmaker = new Bookmaker();
 
         StartUp(raceManager, saveData);
 
         Player player = Login(raceManager);
 
-        while (player.LoggedIn)
+        while (player != null)
         {
             Console.WriteLine("Options");
 
@@ -111,7 +111,7 @@ class Program
                     save.CreateSave(raceManager, bookmaker);
                     break;
                 case 5:
-                    player.LoggedIn = false;
+                    player = null;
                     break;
                 case 6:
                     for (int raceIndex = 0; raceIndex < raceManager.Races.Count; raceIndex++)
@@ -145,7 +145,8 @@ class Program
                         if (placedMoney > player.Money)
                         {
                             Console.WriteLine("You do not have that much money");
-                        } else
+                        }
+                        else
                         {
                             Bet bet = bookmaker.PlaceBet(pickedRace, pickedRat, player, placedMoney);
                             bookmaker.Bets.Add(bet);
@@ -176,11 +177,6 @@ class Program
     }
     public static void StartUp(RaceManager raceManager, SaveCenter saveData)
     {
-        raceManager.Races = saveData.Races;
-        raceManager.Tracks = saveData.Tracks;
-        raceManager.Rats = saveData.Rats;
-        raceManager.Players = saveData.Players;
-
         foreach (Race race in saveData.Races)
         {
             raceManager.CreateRace(race.RaceID, race.Rats, race.RaceTrack);

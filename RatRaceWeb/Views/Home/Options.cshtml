@@ -1,0 +1,31 @@
+﻿@using RatRaceWeb.Models.ViewModels
+@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Options";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>What would you like to do?</p>
+
+<div style="display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap;">
+    <a asp-area="" asp-controller="Options" asp-action="CreateRace" class="button-option">
+        Create Race
+    </a>
+    <a asp-area="" asp-controller="Options" asp-action="CreateTrack" class="button-option">
+        Create Track
+    </a>
+    <a asp-area="" asp-controller="Options" asp-action="CreateRat" class="button-option">
+        Create Rat
+    </a>
+    <form method="post" asp-controller="Options" asp-action="SaveGame">
+        <button type="submit" style="border: none;" class="button-option">Save Game</button>
+    </form>
+    <form method="post" asp-controller="Options" asp-action="ExitGame">
+        <button type="submit" style="border: none;" class="button-option">Exit Game</button>
+    </form>
+    <a asp-area="" asp-controller="Options" asp-action="PickRace" class="button-option">
+        Pick a Race
+    </a>
+</div>
+

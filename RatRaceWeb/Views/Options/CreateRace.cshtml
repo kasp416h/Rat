@@ -1,0 +1,51 @@
+﻿@using RatRaceWeb.Models.ViewModels
+@model CreateRaceViewModel
+
+@{
+    ViewData["Title"] = "Create Race";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" asp-action="CreateRace">
+    <div style="display: flex; flex-direction: column;">
+        <label for="selectedRat">Select a Rat:</label>
+        @{
+            List<SelectListItem> ratListItems = new List<SelectListItem>();
+            List<Rat.Rat> availableRats = ViewData["AvailableRats"] as List<Rat.Rat>;
+
+            foreach (Rat.Rat rat in availableRats)
+            {
+                ratListItems.Add(new SelectListItem
+                {
+                    Text = rat.Name,
+                    Value = rat.Name,
+                });
+            }
+        }
+        @Html.ListBoxFor(model => model.SelectedRats, ratListItems, new { @class = "form-control" })
+    </div>
+
+    <div style="display: flex; flex-direction: column;">
+        <label for="selectedTrack">Select a Track:</label>
+        @{
+            List<SelectListItem> trackListItems = new List<SelectListItem>();
+            List<Rat.Track> availableTracks = ViewData["AvailableTracks"] as List<Rat.Track>;
+
+
+            foreach (Rat.Track track in availableTracks)
+            {
+                trackListItems.Add(new SelectListItem
+                {
+                    Text = track.Name,
+                    Value = track.Name,
+                });
+            }
+        }
+        @Html.DropDownList("TrackList", trackListItems, new { @class = "form-control" })
+    </div>
+
+    <button type="submit">Create Race</button>
+</form>
+
+

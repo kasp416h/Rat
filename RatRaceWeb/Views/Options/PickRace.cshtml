@@ -1,0 +1,71 @@
+﻿@using RatRaceWeb.Models.ViewModels
+
+
+@{
+    ViewData["Title"] = "Pick Race";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<form method="post" asp-action="PlaceBet">
+    <div style="display: flex; flex-direction: column;">
+        <label for="selectedRace">Select a Race:</label>
+        @{
+            List<SelectListItem> raceListItems = new List<SelectListItem>();
+            List<Rat.Race> availableRaces = ViewData["availableRaces"] as List<Rat.Race>;
+
+            foreach (Rat.Race race in availableRaces)
+            {
+                raceListItems.Add(new SelectListItem
+                {
+                    Text = race.RaceID.ToString(),
+                    Value = race.RaceID.ToString(),
+                });
+            }
+        }
+        @Html.DropDownList("RaceList", raceListItems, new { @class = "form-control", id = "raceDropdown" })
+    </div>
+
+    <div style="display: flex; flex-direction: column;">
+        <label for="selectedRat">Select a Rat:</label>
+        <select id="ratDropdown" name="SelectedRat" multiple>
+        </select>
+    </div>
+
+    <label for="trackLength">TrackLength:</label>
+    <input type="text" id="trackLength" name="trackLength" required>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>$(document).ready(function () {
+        function loadRatsForRace(raceId) {
+            $.ajax({
+                url: "/Options/GetRatsForRace",
+                type: "GET",
+                data: { raceId: raceId },
+                success: function (rats) {
+                    $.each(rats, function (index, rat) {
+                        $("#ratDropdown").append(
+                            $("<option></option>")
+                                .attr("value", rat)
+                                .text(rat)
+                        );
+                        console.log(rat);
+                    });
+                },
+                error: function () {
+                    console.error("Error retrieving rats for the selected race.");
+                }
+            });
+        }
+
+        var defaultRaceId = 1;
+        loadRatsForRace(defaultRaceId);
+
+        $("#raceDropdown").change(function () {
+            $("#ratDropdown").empty();
+            var selectedRace = $("#raceDropdown").val();
+            loadRatsForRace(selectedRace);
+        });
+    });</script>

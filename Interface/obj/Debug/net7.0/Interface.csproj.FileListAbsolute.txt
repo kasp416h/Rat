@@ -19,3 +19,17 @@
 /Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Rat.pdb
 /Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Data Access Layer.pdb
 /Users/kasperhog/Projects/Rat/Interface/obj/Debug/net7.0/Interface.csproj.CopyComplete
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/AWSSDK.Core.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/AWSSDK.SecurityToken.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/DnsClient.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/MongoDB.Bson.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/MongoDB.Driver.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/MongoDB.Driver.Core.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/MongoDB.Libmongocrypt.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/SharpCompress.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/Snappier.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/ZstdSharp.dll
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/runtimes/linux/native/libmongocrypt.so
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/runtimes/osx/native/libmongocrypt.dylib
+/Users/kasperhog/Projects/Rat/Interface/bin/Debug/net7.0/runtimes/win/native/mongocrypt.dll

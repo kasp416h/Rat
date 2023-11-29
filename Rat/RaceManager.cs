@@ -3,9 +3,21 @@
 public class RaceManager
 {
     public List<Track> Tracks { get; set;}
+
     public List<Player> Players { get; set; }
+
     public List<Race> Races { get; set; }
+
     public List<Rat> Rats { get; set; }
+
+    public RaceManager(List<Track> tracks, List<Player> players, List<Race> races, List<Rat> rats)
+    {
+        Tracks = tracks;
+        Players = players;
+        Races = races;
+        Rats = rats;
+    }
+
     public Race CreateRace(int raceID, List<Rat> rats, Track track)
     {
         Race race = new Race(raceID, rats, track);
@@ -36,6 +48,4 @@ public class RaceManager
         Player player = new Player(name, password, money);
         return player;
     }
-
-
 }

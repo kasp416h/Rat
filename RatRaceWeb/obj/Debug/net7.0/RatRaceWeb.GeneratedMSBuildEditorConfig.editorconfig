@@ -1,0 +1,61 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RatRaceWeb
+build_property.RootNamespace = RatRaceWeb
+build_property.ProjectDir = /Users/kasperhog/Projects/Rat/RatRaceWeb/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/kasperhog/Projects/Rat/RatRaceWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/Home/Options.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9PcHRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/Options/CreateRace.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3B0aW9ucy9DcmVhdGVSYWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/Options/CreateRat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3B0aW9ucy9DcmVhdGVSYXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/Options/CreateTrack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3B0aW9ucy9DcmVhdGVUcmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/Options/PickRace.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3B0aW9ucy9QaWNrUmFjZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kasperhog/Projects/Rat/RatRaceWeb/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mntbn4ab26

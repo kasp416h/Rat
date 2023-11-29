@@ -1,0 +1,20 @@
+﻿@using RatRaceWeb.Models.ViewModels
+@model CreateTrackViewModel
+
+@{
+    ViewData["Title"] = "Create Track";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" asp-action="CreateTrack">
+    <div style="margin-bottom: 20px;">
+        <label for="trackName">TrackName:</label>
+        <input type="text" id="trackName" name="trackName" required>
+
+        <label for="trackLength">TrackLength:</label>
+        <input type="text" id="trackLength" name="trackLength" required>
+    </div>
+
+    <button type="submit">Create Track</button>
+</form>
