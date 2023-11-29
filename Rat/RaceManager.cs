@@ -4,6 +4,19 @@ namespace DLL;
 
 public class RaceManager
 {
+    private List<Rat> rats;
+    private List<Player> players;
+    private List<Track> tracks;
+    private List<Race> races;
+
+    public RaceManager(List<Rat> rats, List<Player> players, List<Track> tracks, List<Race> races)
+    {
+        this.rats = rats;
+        this.players = players;
+        this.tracks = tracks;
+        this.races = races;
+    }
+
     public List<Track> Tracks { get; set;}
     public List<Player> Players { get; set; }
     public List<Race> Races { get; set; }

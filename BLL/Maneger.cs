@@ -24,9 +24,11 @@ namespace BLL
             repo.SendData(RaceManager, bookmaker.Bets);
         }
 
-        public void GetSave()
+        public SaveCenter GetSave()
         {
-            repo.LoadData();
+           SaveCenter data = repo.LoadData();
+
+            return data;
         }
     }
 }

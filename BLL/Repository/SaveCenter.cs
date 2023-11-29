@@ -34,10 +34,15 @@ namespace BLL.Repository
         public SaveCenter LoadData()
         {
             DatabaseSave DBsave = new DatabaseSave();
-            DBsave.GetRats();
-            DBsave.GetPlayers();
-            DBsave.GetTracks();
-            DBsave.GetRaces();
+            List<Rat> rats = DBsave.GetRats();
+            List<Player> players = DBsave.GetPlayers();
+            List<Track> tracks = DBsave.GetTracks();
+            List<Race> races = DBsave.GetRaces();
+            List<Bet> bets = DBsave.GetBets();
+
+            RaceManager returnmaneger = new RaceManager(rats, players, tracks, races);
+            SaveCenter returncenter = new SaveCenter(returnmaneger, bets);
+            return returncenter;
             
         }
 
