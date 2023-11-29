@@ -403,3 +403,7 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+/RatRaceWeb/Models/ViewModels
+/Rat/repository
+/RatRaceWeb
+*.bat
