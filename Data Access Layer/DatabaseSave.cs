@@ -114,7 +114,7 @@ namespace Data_Access_Layer
             List<Bet> Bets = new List<Bet>();
             List<Race> AllRaces = GetRaces();
 
-            using(IDbConnection connection = System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
+            using(IDbConnection connection = new System.Data.SqlClient.SqlConnection("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"))
             {
                 List<int> BetIds = connection.Query<int>("dbo.GetAllBetId", new {}).ToList();
 
@@ -128,9 +128,11 @@ namespace Data_Access_Layer
 
                     int tempuralRaceId = Convert.ToInt32(connection.Query("dbo.GetBetRaceId", new {i}));
 
-                    AllRaces.Where()
+                    Race tempuralrace = (Race)AllRaces.Where(r => r.RaceID == tempuralRaceId);
 
-                    Bet newbet = new Bet(BetMoney, tempuralplayer,  , tempuralrat);
+                    Bet newbet = new Bet(BetMoney, tempuralplayer, tempuralrace, tempuralrat);
+
+                    Bets.Add(newbet);
                 }
             }
 
