@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access Layer", "Data A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{29C4915D-7EBA-4B9E-B292-731A8A99765E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{D3077A16-0E0E-4C88-AC00-0AC5959734D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{29C4915D-7EBA-4B9E-B292-731A8A99765E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29C4915D-7EBA-4B9E-B292-731A8A99765E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29C4915D-7EBA-4B9E-B292-731A8A99765E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3077A16-0E0E-4C88-AC00-0AC5959734D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3077A16-0E0E-4C88-AC00-0AC5959734D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3077A16-0E0E-4C88-AC00-0AC5959734D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3077A16-0E0E-4C88-AC00-0AC5959734D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
