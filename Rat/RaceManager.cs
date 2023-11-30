@@ -17,6 +17,11 @@ public class RaceManager
         this.races = races;
     }
 
+    public RaceManager()
+    {
+
+    }
+
     public List<Track> Tracks { get; set;}
     public List<Player> Players { get; set; }
     public List<Race> Races { get; set; }

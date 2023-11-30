@@ -7,7 +7,7 @@ namespace DLL
     {
         public List<Bet> Bets { get; set; }
         public Race Race { get; set; }
-        public Bookmaker()
+        public Bookmaker(List<Bet> bets)
         {
             Bets = new List<Bet>();
         }

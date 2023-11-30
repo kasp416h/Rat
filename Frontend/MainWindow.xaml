@@ -39,9 +39,12 @@
         </Viewbox>
 
         <Viewbox Grid.Column="2" Grid.Row="3">
-            <StackPanel Orientation="Horizontal">
-                <Button x:Name="LoginButton" Content="Log in" Click="LoginButton_Click"/>
-                <Button x:Name="CreateAcountButton" Content="Create acount"/>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="LoginButton" Content="Log in" Click="LoginButton_Click"/>
+                    <Button x:Name="CreateAcountButton" Content="Create acount" Click="CreateAcountButton_Click"/>
+                </StackPanel>
+                <Label Name="MainWindowErrorLabel"/>
             </StackPanel>
         </Viewbox>
     </Grid>
